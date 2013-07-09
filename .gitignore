@@ -30,3 +30,7 @@ proguard/
 *.ipr
 *.iws
 .idea/
+/.DS_Store
+/JinGong/bin/classes.dex
+/JinGong/bin/resources.ap_
+/JinGong/bin/JinGong.apk

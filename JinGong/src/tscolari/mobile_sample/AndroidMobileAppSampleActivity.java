@@ -21,14 +21,14 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.util.EntityUtils;
 
-import org.apache.commons.httpclient.DefaultHttpMethodRetryHandler;
-import org.apache.commons.httpclient.HttpException;
-import org.apache.commons.httpclient.HttpMethod;
-import org.apache.commons.httpclient.HttpStatus;
-import org.apache.commons.httpclient.methods.GetMethod;
-import org.apache.commons.httpclient.params.HttpMethodParams;
-import org.apache.commons.httpclient.*;
-import org.apache.commons.httpclient.methods.*;
+//import org.apache.commons.httpclient.DefaultHttpMethodRetryHandler;
+//import org.apache.commons.httpclient.HttpException;
+//import org.apache.commons.httpclient.HttpMethod;
+//import org.apache.commons.httpclient.HttpStatus;
+//import org.apache.commons.httpclient.methods.GetMethod;
+//import org.apache.commons.httpclient.params.HttpMethodParams;
+//import org.apache.commons.httpclient.*;
+//import org.apache.commons.httpclient.methods.*;
 
 
 
@@ -45,7 +45,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.wifi.p2p.WifiP2pManager.ActionListener;
+//import android.net.wifi.p2p.WifiP2pManager.ActionListener;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.PowerManager;
@@ -334,7 +334,8 @@ public class AndroidMobileAppSampleActivity extends Activity {
             return true;
         }
 
-        public void onGeolocationPermissionsShowPrompt(String origin, GeolocationPermissions.Callback callback) {
+        @Override
+		public void onGeolocationPermissionsShowPrompt(String origin, GeolocationPermissions.Callback callback) {
             callback.invoke(origin, true, false);
             super.onGeolocationPermissionsShowPrompt(origin, callback);
         }
