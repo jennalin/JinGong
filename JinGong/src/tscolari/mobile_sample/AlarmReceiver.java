@@ -31,11 +31,13 @@ import android.widget.Toast;
 
 public class AlarmReceiver extends BroadcastReceiver 
 {    
+	public Context context;
 
      @Override
      public void onReceive(Context context, Intent intent) 
      {   
 
+    	 this.context = context;
     	 String httpUrl = "http://www.beessoft.com/kd/app/save_app_jwd?";
     	 List <BasicNameValuePair> params = new ArrayList <BasicNameValuePair>();
 
@@ -123,7 +125,7 @@ public class AlarmReceiver extends BroadcastReceiver
         	public void onSuccess(String response)
         	{
         		System.out.println(response);
-
+        		Toast.makeText(AlarmReceiver.this.context, response, Toast.LENGTH_SHORT).show();
         	}
         		});
 
